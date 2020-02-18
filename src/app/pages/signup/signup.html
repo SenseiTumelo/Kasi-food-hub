@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!--ion-content>
 
   <div class="signup-logo">
     <img src="assets/img/appicon.svg" alt="Ionic Logo">
@@ -43,4 +43,34 @@
     </div>
   </form>
 
+</ion-content-->
+<ion-content padding>
+  <div class="signup-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+  </div>
+  <form #form="ngForm"  method="post">
+    <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input ngModel name="fName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input ngModel name="lName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" ngModel name="password"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="full" color="danger">Register</ion-button>
+  </form>
+  <p text-center>Already have a account?</p>
+  <ion-button expand="full" color="primary" href="/" >Login</ion-button>
 </ion-content>

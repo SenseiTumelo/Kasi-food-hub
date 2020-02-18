@@ -32,7 +32,26 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
     canLoad: [CheckTutorial]
+  },
+  {
+    path: 'restaurant',
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },  {
+    path: 'forget-pwd',
+    loadChildren: () => import('./forget-pwd/forget-pwd.module').then( m => m.ForgetPwdPageModule)
   }
+
+
+
+
 ];
 
 @NgModule({

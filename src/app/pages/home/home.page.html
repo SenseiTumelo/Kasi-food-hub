@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h1>Resturants</h1>
+  <ion-slides [options] = "slideConfig">
+    <ion-slide *ngFor= "let user of userHome" >
+      <ion-card >
+        <img src="https://cdn.primedia.co.za/primedia-broadcasting/image/upload/v1488364912/qjwnidvakslcmh6rbp62.jpg" />
+        <ion-card-header>
+
+          <ion-card-title>{{user.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{user.email}}
+        </ion-card-content>
+        <ion-button expand="block" fill="outline">View</ion-button>
+       </ion-card>
+
+    </ion-slide>
+
+  </ion-slides>
+
+  <h1>Advertisements</h1>
+ <ion-slides [options] = "slideConfig">
+  <ion-slide *ngFor= "let user of userHome">
+    <ion-card >
+      <img src="https://dashboard.vami.co.za/images/store/items/nklunchml_9255964923.jpg"/>
+      <ion-card-header>
+
+        <ion-card-title>{{user.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{user.email}}
+      </ion-card-content>
+      <ion-button expand="block" fill="outline">View</ion-button>
+     </ion-card>
+
+  </ion-slide>
+</ion-slides>
+  <h1>Food</h1>
+  <ion-slides [options] = "slideConfig">
+    <ion-slide *ngFor= "let user of userHome">
+      <ion-card >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1zatFgNOe25l0MmApkR7oQAyk9DsQzQ45c-e29LFUXiiVv2pj" />
+        <ion-card-header>
+
+          <ion-card-title>{{user.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{user.email}}
+        </ion-card-content>
+        <ion-button expand="block" fill="outline">View</ion-button>
+       </ion-card>
+
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

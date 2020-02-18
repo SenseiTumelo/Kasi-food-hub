@@ -8,7 +8,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { Storage } from '@ionic/storage';
-
 import { UserData } from './providers/user-data';
 
 @Component({
@@ -20,11 +19,21 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
+    },
+   /* {
       title: 'Schedule',
       url: '/app/tabs/schedule',
       icon: 'calendar'
-    },
+    },*/
     {
+      title: 'Restaurant',
+      url: '/restaurant',
+      icon: 'restaurant'
+    },
+   /* {
       title: 'Speakers',
       url: '/app/tabs/speakers',
       icon: 'contacts'
@@ -33,7 +42,7 @@ export class AppComponent implements OnInit {
       title: 'Map',
       url: '/app/tabs/map',
       icon: 'map'
-    },
+    },*/
     {
       title: 'About',
       url: '/app/tabs/about',
@@ -121,5 +130,10 @@ export class AppComponent implements OnInit {
     this.menu.enable(false);
     this.storage.set('ion_did_tutorial', false);
     this.router.navigateByUrl('/tutorial');
+  }
+
+  openRestaurant(){
+    this.menu.enable(true);
+    this.router.navigateByUrl('/restaurant');
   }
 }
